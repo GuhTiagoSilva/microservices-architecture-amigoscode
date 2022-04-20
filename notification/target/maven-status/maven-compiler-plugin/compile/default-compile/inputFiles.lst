@@ -1,0 +1,7 @@
+/home/gustavo/Documents/Projects/Java/AmigosCode/Microservices/amigosservices/notification/src/main/java/com/amigoscode/notification/NotificationService.java
+/home/gustavo/Documents/Projects/Java/AmigosCode/Microservices/amigosservices/notification/src/main/java/com/amigoscode/notification/Notification.java
+/home/gustavo/Documents/Projects/Java/AmigosCode/Microservices/amigosservices/notification/src/main/java/com/amigoscode/notification/NotificationRepository.java
+/home/gustavo/Documents/Projects/Java/AmigosCode/Microservices/amigosservices/notification/src/main/java/com/amigoscode/notification/NotificationConfig.java
+/home/gustavo/Documents/Projects/Java/AmigosCode/Microservices/amigosservices/notification/src/main/java/com/amigoscode/notification/NotificationApplication.java
+/home/gustavo/Documents/Projects/Java/AmigosCode/Microservices/amigosservices/notification/src/main/java/com/amigoscode/notification/rabbitmq/NotificationConsumer.java
+/home/gustavo/Documents/Projects/Java/AmigosCode/Microservices/amigosservices/notification/src/main/java/com/amigoscode/notification/NotificationController.java
