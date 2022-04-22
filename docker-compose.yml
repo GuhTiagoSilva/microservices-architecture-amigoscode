@@ -45,74 +45,71 @@ services:
       - "15672:15672"
     networks:
       - spring
-##  apigateway:
-##    image: guhtiagosilva/apigateway:latest
-##    container_name: apigw
-##    ports:
-##      - "8083:8083"
-##    environment:
-##      - SPRING_PROFILES_ACTIVE=docker
-##    depends_on:
-##      - zipkin
-##      - eureka-server
-##    networks:
-##      - spring
-##  eureka-server:
-##    image: guhtiagosilva/eureka-server:latest
-##    container_name: eureka-server
-##    ports:
-##      - "8761:8761"
-##    environment:
-##      - SPRING_PROFILES_ACTIVE=docker
-##    depends_on:
-##      - zipkin
-##    networks:
-##      - spring
-##  customer:
-##    image: guhtiagosilva/customer:latest
-##    container_name: customer-microservice
-##    ports:
-##      - "8080:8080"
-##    environment:
-##      - SPRING_PROFILES_ACTIVE=docker
-##    depends_on:
-##      - zipkin
-##      - eureka-server
-##      - postgres
-##      - rabbitmq
-##    networks:
-##      - spring
-##      - postgres
-##  fraud:
-##    image: guhtiagosilva/fraud:latest
-##    container_name: fraud-microservice
-##    ports:
-##      - "8081:8081"
-##    environment:
-##      - SPRING_PROFILES_ACTIVE=docker
-##    depends_on:
-##      - zipkin
-##      - eureka-server
-##      - postgres
-##      - rabbitmq
-##    networks:
-##      - spring
-##      - postgres
-##  notification:
-##    image: guhtiagosilva/notification:latest
-##    container_name: notification-microservice
-##    ports:
-##      - "8090:8090"
-##    environment:
-##      - SPRING_PROFILES_ACTIVE=docker
-##    depends_on:
-##      - zipkin
-##      - eureka-server
-##      - rabbitmq
-##      - postgres
-##    networks:
-##      - spring
-##      - postgres
+  ##  apigateway:
+  ##    image: guhtiagosilva/apigateway:latest
+  ##    container_name: apigw
+  ##    ports:
+  ##      - "8083:8083"
+  ##    environment:
+  ##      - SPRING_PROFILES_ACTIVE=docker
+  ##    depends_on:
+  ##      - zipkin
+  ##      - eureka-server
+  ##    networks:
+  ##      - spring
+  ##  eureka-server:
+  ##    image: guhtiagosilva/eureka-server:latest
+  ##    container_name: eureka-server
+  ##    ports:
+  ##      - "8761:8761"
+  ##    environment:
+  ##      - SPRING_PROFILES_ACTIVE=docker
+  ##    depends_on:
+  ##      - zipkin
+  ##    networks:
+  ##      - spring
+  customer:
+    image: guhtiagosilva/customer:latest
+    container_name: customer-microservice
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+    networks:
+      - spring
+      - postgres
+  fraud:
+    image: guhtiagosilva/fraud:latest
+    container_name: fraud-microservice
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - zipkin
+      - postgres
+      - rabbitmq
+    networks:
+      - spring
+      - postgres
+  notification:
+    image: guhtiagosilva/notification:latest
+    container_name: notification-microservice
+    ports:
+      - "8090:8090"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    depends_on:
+      - zipkin
+      - rabbitmq
+      - postgres
+    networks:
+      - spring
+      - postgres
 networks:
   spring:
     driver: bridge
